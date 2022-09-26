@@ -1,0 +1,27 @@
+.gallery__grota {
+    border-bottom: 1px solid rgb(154, 138, 120);
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.gallery__left {
+    margin-bottom: 30px;
+}
+
+.gallery__content {
+    max-width: 90%;
+}
+
+.gallery__right--right{
+    margin-top: 30px;
+}
+
+@media screen and (max-width:600px) {
+    .gallery__content {
+        width: 100%;
+    }
+    img{
+        width: 100%;
+    }
+    
+}

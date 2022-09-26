@@ -1,0 +1,135 @@
+.review__content {
+    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    height: 439px;
+
+}
+
+.review__depoimentos {
+    border: 1px solid rgb(107, 94, 78);
+
+}
+
+.review__info {
+    font-size: 40px;
+    color: white;
+    text-transform: capitalize;
+    font-weight: bold;
+    background-color: transparent;
+    text-decoration: underline;
+
+}
+
+.review__item {
+    border: 1px solid rgb(107, 94, 78);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: none;
+
+
+}
+
+.review__action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+
+}
+
+.review__item:first-child {
+    background-color: rgb(154, 138, 120);
+
+}
+
+.review__text {
+    color: white;
+    max-width: 217px;
+    line-height: 1.8em;
+    font-size: 16px;
+    margin: 0;
+    display: block;
+
+
+}
+
+.review__name {
+    color: rgb(154, 138, 120);
+    text-transform: capitalize;
+    font-size: 30px;
+    max-width: 250px;
+    font-weight: 500;
+    margin-top: 20px;
+
+
+}
+
+/*--Responsividade---*/
+
+@media screen and (max-width:1024px) {
+    .review__info {
+        font-size: 30px;
+    }
+
+    .review__text {
+        margin: 10px 10px 0 10px;
+        font-size: 14px;
+    }
+
+    .review__name {
+        margin-bottom: 10px;
+        font-size: 25px;
+        width: 100%;
+        text-align: left;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width:832px) {
+
+    .review__content {
+        grid-template-columns: auto auto;
+
+    }
+
+    .review__info {
+        font-size: 30px;
+    }
+
+    .review__text {
+        margin-top: 10px;
+    }
+
+    .review__name {
+        margin-bottom: 10px;
+    }
+
+    .review__item {
+        border-bottom: none;
+    }
+
+    .review__item:nth-child(3) {
+        border: 1px solid rgb(107, 94, 78);
+    }
+
+    .review__item:nth-child(4) {
+        border: 1px solid rgb(107, 94, 78);
+        border-left: none;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    .review__content {
+        grid-template-columns: auto;
+
+    }
+
+    .review__item {
+        border-left: 1px solid rgb(107, 94, 78);
+    }
+    .review__info{
+        font-size: 25px;
+    }
+}
