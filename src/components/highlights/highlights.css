@@ -1,0 +1,125 @@
+.highlights {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid rgb(107, 94, 78);
+
+
+
+}
+
+
+.highlights__first {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: none;
+    border-right: none;
+    height: 287px;
+
+}
+
+.highlights__first,
+.highlights__second,
+.highlights__fourth,
+.highlights__third {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgb(107, 94, 78);
+    border-top: none;
+    height: 287px;
+
+
+}
+
+.highlights__third {
+    height: 287px;
+
+}
+
+.highlights__fourth {
+    border-top: none;
+    height: 287px;
+
+}
+
+.highlights__text {
+    color: white;
+    line-height: 1.4em;
+    font-size: 18px;
+    text-align: center;
+
+}
+
+.highlights__text::first-letter {
+    text-transform: capitalize;
+}
+
+.highlights svg {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    min-width: 100%;
+
+}
+
+@media(max-width:832px) {
+
+    .highlights {
+        grid-template-columns: auto auto;
+        min-height: 287px;
+    }
+}
+
+@media(max-width:600px) {
+
+    .highlights {
+        grid-template-columns: auto auto;
+
+
+    }
+
+    .highlights svg {
+        height: 48px;
+        width: 45px;
+    }
+
+    .highlights__first,
+    .highlights__second,
+    .highlights__fourth,
+    .highlights__third {
+        height: 179px;
+        border-right: none;
+        border-left: none;
+        border-top: 1px solid rgb(107, 94, 78);
+
+    }
+
+    .highlights__text {
+        max-width: 200px;
+    }
+}
+
+
+@media(max-width:425px) {
+    .highlights {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .highlights__first,
+    .highlights__second,
+    .highlights__fourth,
+    .highlights__third {
+        max-height: 200px;
+        max-width: 204px;
+        border-left: none;
+        border-right: none;
+    }
+
+    .highlights__text {
+        font-size: 16px;
+    }
+}

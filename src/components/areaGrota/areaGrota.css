@@ -1,0 +1,81 @@
+.gallery__grota {
+    border-bottom: 1px solid rgb(154, 138, 120);
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.gallery__nelson {
+    border-bottom: 1px solid rgb(154, 138, 120);
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.gallery__title {
+    font-size: 30px;
+    color: rgb(154, 138, 120);
+    margin-top: 50px;
+    padding-top: 10px;
+    margin-bottom: 28px;
+    display: block;
+    font-weight: 500;
+
+}
+
+.gallery__text {
+    font-size: 16px;
+    line-height: 1.8em;
+    color: white;
+    max-width: 619px;
+    padding-bottom: 10px;
+    font-weight: 400;
+
+}
+
+.gallery__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: auto;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.gallery__area {
+    padding: 5px;
+}
+
+.gallery__link {
+    display: inline-block;
+
+}
+
+.gallery__span {
+    display: none;
+
+}
+
+.gallery__position {
+    position: relative;
+
+}
+
+.gallery__left {
+    margin-bottom: 30px;
+}
+
+.gallery__content {
+    max-width: 90%;
+}
+
+.gallery__right--right {
+    margin-top: 30px;
+}
+
+@media screen and (max-width:600px) {
+    .gallery__content {
+        width: 100%;
+    }
+
+    img {
+        width: 100%;
+    }
+}

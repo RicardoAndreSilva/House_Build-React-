@@ -1,0 +1,27 @@
+.social {
+    z-index: 999;
+    position: fixed;
+    left: -10px;
+    bottom: 50px;
+}
+
+.social__pages {
+    display: flex;
+    flex-direction: column;
+}
+
+.social__page {
+    list-style-type: none;
+    padding: 5px;
+}
+
+.social__link {
+    text-decoration: none;
+    display: block;
+}
+
+.social__img {
+    width: 20px;
+    height: 20px;
+    aspect-ratio: 1/1;
+}

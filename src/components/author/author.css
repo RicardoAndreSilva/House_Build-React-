@@ -1,0 +1,81 @@
+.author__nelson {
+    margin-top: 40px;
+    margin-bottom: 67px;
+}
+
+
+.author__area {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    min-height: 404px;
+
+}
+
+.author__items {
+    border: 1px solid rgb(154, 138, 120);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+.author__items:first-child {
+    background-color: rgb(154, 138, 120);
+}
+
+.author__text {
+    color: white;
+    text-transform: capitalize;
+    font-size: 40px;
+    max-width: 154px;
+}
+
+.author__name {
+    color: rgb(107, 94, 78);
+    max-width: 222px;
+    text-decoration: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.author__name::first-letter {
+    text-transform: capitalize;
+}
+
+@media(max-width:900px) {
+
+    .author__area {
+        grid-template-columns: auto auto;
+
+    }
+
+    .author__items {
+        height: 255px;
+    }
+
+
+}
+
+@media (max-width:600px) {
+
+    .author__area {
+        grid-template-columns: auto;
+
+    }
+
+    .author__items {
+        height: 255px;
+    }
+
+    .author__text {
+        font-size: 30px;
+    }
+
+    .author__name {
+        font-size: 25px;
+        text-align: center;
+    }
+
+
+}
