@@ -16,11 +16,11 @@ export default function Nav() {
                     </div>
                     {/*---Nav---*/}
                     <nav className="nav">
-                        <input type="checkbox" class="menu__checkbox"></input>
-                        <div class="nav__mobile">
-                            <span class="nav__span"></span>
-                            <span class="nav__span"></span>
-                            <span class="nav__span"></span>
+                        <input type="checkbox" className="menu__checkbox"></input>
+                        <div className="nav__mobile">
+                            <span className="nav__span"></span>
+                            <span className="nav__span"></span>
+                            <span className="nav__span"></span>
                         </div>
                         <i className="icofont-navigation-menu nav__mobile"></i>
                         <ul className="nav__list">
@@ -31,19 +31,31 @@ export default function Nav() {
                                 <Link className="nav__link" to="/Services">Serviços</Link>
                             </li>
                             <li className="nav__item">
-                                <Link className="nav__link" to="/projetos"> projetos </Link>
-                            </li>
-                            <li className="nav__item">
-                                <Link to="#hrefp__href__back" className="nav__link"> contatos </Link>
+                                <Link className="nav__link" to="/projetos">projetos </Link>
                             </li>
                             <li className="nav__item nav__item--select">
-                                <span className="nav__link--span" to="/projetos"> ligar </span>
+                                <span className="nav__link--span" href="tel:(11) 111-7890"> ligar </span>
+                            </li>
+                            <li class="nav__page">
+                                <Link class="nav__link" to="#">
+                                    <img class="nav__img" src="assets/logo_facebook.webp" alt="Icon facebook" />
+                                </Link>
+                            </li>
+                            <li class="nav__page">
+                                <Link class="nav__link" to="#">
+                                    <img class="nav__img" src="assets/logo__instagram.webp" alt="Icon instagram" />
+                                </Link>
+                            </li>
+                            <li class="nav__page">
+                                <Link class="nav__link" to="#">
+                                    <img class="nav__img" src="assets/logo_media.webp" alt="Icon facebook" />
+                                </Link>
                             </li>
                         </ul>
                     </nav>
                 </div>
                 / {/*---Header About--- */}
-                <div className="header__about">
+                <div className="header__about header__about--hidden">
                     <h1 className="header__title">newel reformas residenciais</h1>
                     <span className="header__subtitle">Criando os ambientes dos seus sonhos</span>
                 </div>

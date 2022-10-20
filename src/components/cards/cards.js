@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import './cards.css';
 
 export default function Cards() {
@@ -19,7 +19,7 @@ export default function Cards() {
                             <li className="card__item">pisos e acabamentos</li>
                         </ul>
                         <div className="card__extra">
-                            <Link className="card__link" to="/services">mais informações</Link>
+                            <Link className="card__link" to="/Services#service">mais informações</Link>
                         </div>
                     </div>
                 </div>

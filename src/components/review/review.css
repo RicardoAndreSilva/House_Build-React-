@@ -1,3 +1,4 @@
+
 .review__content {
     grid-template-columns: repeat(4, 1fr);
     display: grid;
@@ -6,13 +7,13 @@
 }
 
 .review__depoimentos {
-    border: 1px solid rgb(107, 94, 78);
+    border: 1px solid var(--bg-color1);
 
 }
 
 .review__info {
     font-size: 40px;
-    color: white;
+    color: var(--bg-white);
     text-transform: capitalize;
     font-weight: bold;
     background-color: transparent;
@@ -21,7 +22,7 @@
 }
 
 .review__item {
-    border: 1px solid rgb(107, 94, 78);
+    border: 1px solid var(--bg-color1);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,12 +40,12 @@
 }
 
 .review__item:first-child {
-    background-color: rgb(154, 138, 120);
+    background-color: var(--bg-color2);
 
 }
 
 .review__text {
-    color: white;
+    color: var(--bg-white);
     max-width: 217px;
     line-height: 1.8em;
     font-size: 16px;
@@ -55,7 +56,7 @@
 }
 
 .review__name {
-    color: rgb(154, 138, 120);
+    color: var(--bg-color2);
     text-transform: capitalize;
     font-size: 30px;
     max-width: 250px;
@@ -66,8 +67,7 @@
 }
 
 /*--Responsividade---*/
-
-@media screen and (max-width:1024px) {
+@media(max-width:1024px) {
     .review__info {
         font-size: 30px;
     }
@@ -86,7 +86,7 @@
     }
 }
 
-@media(max-width:832px) {
+@media (max-width:832px) {
 
     .review__content {
         grid-template-columns: auto auto;
@@ -110,24 +110,24 @@
     }
 
     .review__item:nth-child(3) {
-        border: 1px solid rgb(107, 94, 78);
+        border: 1px solid var(--bg-color1);
     }
 
     .review__item:nth-child(4) {
-        border: 1px solid rgb(107, 94, 78);
-        border-left: none;
+        border: 1px solid var(--bg-color1);
     }
 
 }
 
-@media(max-width:600px) {
+@media(max-width:588px) {
     .review__content {
         grid-template-columns: auto;
+        height:auto;
 
     }
 
     .review__item {
-        border-left: 1px solid rgb(107, 94, 78);
+        border-left: 1px solid var(--bg-color1);
     }
 
     .review__info {

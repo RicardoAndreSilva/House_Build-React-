@@ -1,8 +1,58 @@
-import React from 'react'
+
+import React, { useEffect, useId, useState } from "react";
 import { Link } from 'react-router-dom';
 import './footer.css'
+//--import form validation--//
 
-export default function Review() {
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+
+
+export default function Footer() {
+    /*--Method useId--*/
+    const id1 = useId()
+    const id2 = useId()
+    const id3 = useId()
+    const id4 = useId()
+    const id5 = useId()
+
+    const [message, setMessage] = useState("");
+
+    //--validation form--//
+    const createUsersFormValidate = yup.object().shape({
+        nome: yup
+            .string().required('Nome é obrigatorio'),
+        sobrenome: yup
+            .string().required('Sobrenome é obrigatorio'),
+        telefone: yup
+            .number().min(9).required('Telefone é obrigatorio'),
+        email: yup
+            .string().required('Email é obrigatorio'),
+        morada: yup
+            .string().required('Morada é obrigatoria')
+
+    });
+
+    //--yupResolver--validate inputs--//
+    const { register, handleSubmit, formState: { errors }, reset } = useForm({
+        resolver: yupResolver(createUsersFormValidate)
+    });
+
+
+    //-- Reset when submited--//
+    const onSubmitHandler = (data) => {
+        setMessage(<alert>Enviado com sucesso!</alert>)
+        reset();
+    };
+
+    //--Remove message when submited after seconds--//
+    useEffect(() => {
+        setTimeout(() => {
+            setMessage("")
+        }, 16000)
+    }, [message])
+
     return (
         /*--Footer--*/
         <footer className="footer" id="top__to__back">
@@ -50,7 +100,7 @@ export default function Review() {
                             <span className="footer__text">(11) 3456-7890</span>
                         </div>
                         <div className="footer__about">
-                            <span className="footer__text">© 2022 por rewel reformas residenciais. orgulhosamente criado Ricardo S.</span>
+                            <span className="footer__text">© 2022 por rewel Reformas residenciais. orgulhosamente criado Ricardo S.</span>
                         </div>
                     </div>
                 </div >
@@ -58,34 +108,40 @@ export default function Review() {
                 {/*Footer middle--*/}
                 <div className="footer__content">
                     <div className="footer__items">
-                        <form className="footer__form" action="enviar.php" method="post">
+                        <form onSubmit={handleSubmit(onSubmitHandler)} className="footer__htmlForm" action="enviar.php" method="post">
                             <div className="input__your--name">
                                 <div className="input__name">
-                                    <label for="name" className="label">Nome</label>
-                                    <input type="text" id="name" required />
+                                    <label htmlFor={id1} className="label">Nome</label>
+                                    <input type="text" id={id1} name="nome" {...register('nome')} />
+                                    {errors.nome && <errorMessage>{errors.nome?.message}</errorMessage>}
                                 </div>
                                 <div className="input__surname">
-                                    <label for="sobrenome" className="label">sobrenome</label>
-                                    <input type="text" id="sobrenome" required />
+                                    <label htmlFor="sobrenome" className="label">sobrenome</label>
+                                    <input type="text" id="sobrenome" name="sobrenome" {...register('sobrenome')} />
+                                    {errors.sobrenome && <errorMessage>{errors.sobrenome?.message}</errorMessage>}
                                 </div>
                             </div>
                             <div className="input__email">
-                                <label for="email" className="label">Email</label>
-                                <input type="email" className="input__mail" id="email" required />
+                                <label htmlFor={id2} className="label">Email</label>
+                                <input type="email" className="input__mail" id={id2} name="email" {...register('email')} />
+                                {errors.email && <errorMessage>{errors.email?.message}</errorMessage>}
                             </div>
                             <div className="input__extra">
                                 <div className="input__phone">
-                                    <label for="phone" className="label">phone</label>
-                                    <input type="number" id="phone" required />
+                                    <label htmlFor={id3} className="label">telefone</label>
+                                    <input type="text" id={id3} name="telefone" {...register('telefone')} />
+                                    {errors.telefone && <errorMessage>{errors.telefone?.message}</errorMessage>}
                                 </div>
                                 <div className="input__adress">
-                                    <label for="adress" className="label">adress</label>
-                                    <input type="text" id="adress" required />
+                                    <label htmlFor={id5} className="label">morada</label>
+                                    <input type="text" id={id4} name="morada" {...register('morada')} />
+                                    {errors.morada && <errorMessage>{errors.morada?.message}</errorMessage>}
                                 </div>
                             </div>
                             <div className="button__submit">
-                                <button className="button__send">enviar</button>
+                                <button type="submit" className="button__send">enviar</button>
                             </div>
+                            <span className="submited__sucess">{message}</span>
                         </form>
                     </div>
                 </div>

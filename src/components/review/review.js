@@ -40,10 +40,7 @@ export default function Review() {
                 <div className="review__item">
                     <div className="review__action">
                         <p className="review__text">
-                            "Sou um depoimento. Clique aqui para editar seu próprio texto. Você também pode alterar a fonte e mais.
-                            Use
-                            este espaço
-                            para compartilhar algo bom sobre você e seus serviços."
+                            "Sou um depoimento. Clique aqui para editar seu próprio texto. Você também pode alterar a fonte e mais.Use este espaço para compartilhar algo bom sobre você e seus serviços."
                         </p>
                         <span className="review__name">chris pacheco</span>
                     </div>

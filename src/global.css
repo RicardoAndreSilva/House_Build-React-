@@ -1,21 +1,35 @@
+:root {
+  --bg-color: rgb(38, 38, 38);
+  --bg-black: black;
+  --bg-color1: rgb(107, 94, 78);
+  --bg-color2: rgb(154, 138, 120);
+  --bg-color3: rgb(187, 165, 139);
+  --bg-white: white;
+}
+
 body {
   font-family: 'Raleway', sans-serif;
-  background-color: rgb(38, 38, 38);
-  min-height: 100vh;
+  background-color: var(--bg-color);
+  height: 100vh;
+  width: 100%;
 }
 
 
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+
 }
 
 .container {
-  max-width: 100%;
   margin-left: 60px;
   margin-right: 60px;
 
+}
 
+.base {
+  width: 100%;
+  min-width: 100%;
 }
 
 img {
@@ -25,14 +39,41 @@ img {
   display: block;
 }
 
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border: 1px solid var(--bg-black);
+}
 
+.back-to-top:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  transform: scale(1.05);
+}
 
-@media (max-width:600px) {
+.back-to-top--show {
+  bottom: 50px;
+}
+
+.back-to-top span {
+  font-size: 36px;
+  color: var(--bg-black)
+}
+
+@media(max-width:600px) {
 
   .container {
     margin-left: 25px;
-    margin-right: 25px;
-
+    margin-right: 20px;
 
   }
 

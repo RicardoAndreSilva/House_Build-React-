@@ -9,7 +9,7 @@ export default function Servicos() {
     return (
         
         /*--section service--*/
-        <section className="service container">
+        <section id="service" className="container">
             <div className="service__content">
                 <div className="service__area">
                     <div className="service__items">

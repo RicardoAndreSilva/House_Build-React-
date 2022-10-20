@@ -85,8 +85,7 @@
     height: 100%;
     visibility: hidden;
     max-height: 28px;
-
-
+    
 }
 
 .project__img {
@@ -129,7 +128,7 @@
     justify-content: center;
     height: 60px;
     width: 240px;
-    background-color: rgb(154, 138, 120);
+    background-color: var(--bg-color2);
     margin-top: 20px;
     box-shadow: rgb(none, 0 1px 4px rgba(0, 0, 0, .6));
     cursor: pointer;
@@ -148,7 +147,7 @@
 
 
 .project__button:hover {
-    background-color: rgb(187, 165, 139);
+    background-color: var(--bg-color3);
 
 }
 
@@ -160,13 +159,15 @@
 
     .project__name {
         font-size: 35px;
+        margin-top: 60px;
     }
 }
 
-@media(max-width:427px) {
+@media(max-width:428px) {
 
     .project__area {
         grid-template-columns: auto;
+        gap: 0;
     }
 
     .project__gallery {
@@ -179,5 +180,11 @@
     .project__name {
         margin-top: 50px;
         font-size: 25px;
+    }
+
+    .project__left--2,
+    .project__middle--1,
+    .project__middle--2 {
+        margin-bottom: 5px;
     }
 }

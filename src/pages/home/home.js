@@ -1,6 +1,7 @@
 import React from 'react';
 
 
+
 //---Components--
 import Cards from '../../components/cards/cards';
 import Highlights from '../../components/highlights/highlights';
@@ -15,7 +16,7 @@ import './home.css';
 
 function Home() {
     return (
-        <div>
+        <div >
             <Cards />
             <Highlights />
             <About />
