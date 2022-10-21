@@ -43,9 +43,9 @@
     padding: 5px;
 }
 
-.gallery__link {
+.gallery__picture {
     display: inline-block;
-
+    cursor: pointer;
 }
 
 .gallery__span {
